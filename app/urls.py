@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from unicodedata import name
 from django.contrib import admin
 from django.urls import path
 
@@ -21,10 +22,10 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('metrobus/',VehicleViewSet.as_view()),
-    path('metrobus/<int:pk>',DetailEditorialGenericView.as_view()),
-    path('metrobus/alcaldias/',TownhallGenericView.as_view()),
-    path('metrobus/alcaldias/disponibles/',disponibles)
+    path('metrobus/',VehicleViewSet.as_view(),name='Unidades'),
+    path('metrobus/<int:pk>',DetailVehicleGenericView.as_view(),name='Unidad'),
+    path('metrobus/alcaldias/',TownhallGenericView.as_view(),name='Alcaldias'),
+    path('metrobus/alcaldias/disponibles/',disponibles,name='lista-alcaldias')
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

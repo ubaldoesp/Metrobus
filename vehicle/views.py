@@ -19,7 +19,7 @@ class VehicleViewSet(APIView):
     
     
      
-class DetailEditorialGenericView(RetrieveAPIView):
+class DetailVehicleGenericView(RetrieveAPIView):
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
 

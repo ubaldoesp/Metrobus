@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "a079a2fd-5f60-41a2-94a1-7daa56f2791b",
+		"name": "Metrobus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Uniidades disponibles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/metrobus/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"metrobus",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ubicación de unidad por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/metrobus/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"metrobus",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alcaldias disponibles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/metrobus/alcaldias/disponibles",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"metrobus",
+						"alcaldias",
+						"disponibles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lsta de unidades por alcaldia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/metrobus/alcaldias/?town_hall=Gustavo A. Madero",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"metrobus",
+						"alcaldias",
+						""
+					],
+					"query": [
+						{
+							"key": "town_hall",
+							"value": "Gustavo A. Madero"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
