@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
  
 # Create your models here.
-
+# Modelo de las unidades
 class Vehicle(models.Model):
     
     class Relation(models.IntegerChoices):

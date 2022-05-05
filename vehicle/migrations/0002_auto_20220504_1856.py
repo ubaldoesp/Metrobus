@@ -38,9 +38,8 @@ def import_csv(apps,schema_editor):
             for j in range(5):
               if towns[x][j] in townhalls:  
                   result.append(towns[x][j])
+                  
 
-                #   town_res=
-                 
         for row, loc in zip(data,result):
             row.append(loc)
             if row[10]=='':
@@ -65,15 +64,11 @@ def import_csv(apps,schema_editor):
                 'town_hall':row[12]
             }         
             vehicule_res= Vehicle.objects.create(**vehicle_obj)  
-                #     # print(vehicule_res)
             vehicule_res.save()   
            
     # print(reduce(lambda x,y: str(x)+str(y), map(lambda x: random.randint(1,9), range(9,num))))
-def create_town(result):
-    for loc in result:
-        res=Town.objects.create(name=loc)
-    return res 
 
+# Funnción para la conversion de geoposition y nos de la dirección correcta  
 def geolocation(x):
     geolocator = Nominatim(user_agent='Metrobus',timeout=10)
     location = geolocator.reverse(x)

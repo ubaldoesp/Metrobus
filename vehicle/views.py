@@ -9,6 +9,7 @@ from vehicle.serializers import *
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Vehicle
 # Create your views here.
+# servicio para optener unidades disponibles
 class VehicleViewSet(APIView):
     
     def get(self,request, format=None):
@@ -17,20 +18,19 @@ class VehicleViewSet(APIView):
         return Response(serializer.data)
     
     
-    
-     
+# servicio para solicitar por id la unidad
 class DetailVehicleGenericView(RetrieveAPIView):
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
 
-
+# servicio para traer las unidades por filtro
 class TownhallGenericView(ListAPIView):
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
     filter_backends = [DjangoFilterBackend]
     filter_fields = ['town_hall']     
 
-
+# servicio para traer las alcaldias disponibles
 @api_view(['GET'])
 def disponibles(request):
     if request.method == 'GET':
