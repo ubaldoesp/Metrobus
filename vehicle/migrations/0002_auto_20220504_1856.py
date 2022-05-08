@@ -17,7 +17,6 @@ def import_csv(apps,schema_editor):
                ,"Miguel Hidalgo","Milpa Alta","Tlahuac","Tlalpan","Venustiano Carranza","Xochimilco"]
     result=[]
     Vehicles= apps.get_model('vehicle','Vehicle')
-    Towns= apps.get_model('townhall','Town')
     with open('metrobus.csv') as database_file:
         reader = csv.reader(database_file)
         next(reader, None)
