@@ -43,7 +43,7 @@ API de Metrobus donde muestra las unidades disponibles y a que alcaldias pertene
 
 - Get | Metrobus por ID
 
-![Metrobus ID](Screenshots/id.metrobus.PNG)
+![Metrobus ID](Screenshots/id-metrobus.PNG)
 
 - Get | Unidades por Alcaldia 
 
